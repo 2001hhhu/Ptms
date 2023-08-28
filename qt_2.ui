@@ -46,7 +46,7 @@
         <string>流量图</string>
        </property>
       </widget>
-      <widget class="MplWidget2" name="asss" native="true"/>
+      <widget class="MplWidget" name="asss" native="true"/>
      </widget>
     </item>
     <item>
@@ -72,9 +72,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MplWidget2</class>
+   <class>MplWidget</class>
    <extends>QWidget</extends>
-   <header>mplwidget2.h</header>
+   <header>mplwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
