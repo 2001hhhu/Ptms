@@ -1,18 +1,14 @@
-import PySide2
-import matplotlib.pyplot as plt
-from PySide2.QtCore import QFile
+from PySide2.QtWidgets import *
 from PySide2.QtUiTools import QUiLoader
-from PySide2.QtWidgets import QWidget, QVBoxLayout, QGridLayout, QApplication
-from matplotlib.backends.backend_qt5agg import (FigureCanvasAgg as FigureCanvas,
-                                                NavigationToolbar2QT as NavigationToolbar)
-
+from PySide2.QtCore import QFile
+from matplotlib.backends.backend_qt5agg import (
+    FigureCanvasQTAgg as FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
 from matplotlib.figure import Figure
-
 import random
 import numpy as np
 
 
-class MplWidget(QWidget):
+class MplWidget2(QWidget):
 
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
@@ -21,7 +17,7 @@ class MplWidget(QWidget):
 
         vertical_layout = QVBoxLayout()
         vertical_layout.addWidget(self.canvas)
-        # vertical_layout.addWidget(NavigationToolbar(self.canvas, self))
+        vertical_layout.addWidget(NavigationToolbar(self.canvas, self))
 
         self.canvas.axes = self.canvas.figure.add_subplot(111)
         self.setLayout(vertical_layout)
@@ -36,12 +32,15 @@ class MainWidget(QWidget):
         designer_file.open(QFile.ReadOnly)
 
         loader = QUiLoader()
-        loader.registerCustomWidget(MplWidget)
+        loader.registerCustomWidget(MplWidget2)
         self.ui = loader.load(designer_file, self)
 
         designer_file.close()
 
+        #self.ui.pushButton.clicked.connect(self.update_graph)
         self.ui.button1.clicked.connect(self.update_graph)
+
+        self.setWindowTitle("PySide2 & Matplotlib Example GUI")
 
         grid_layout = QGridLayout()
         grid_layout.addWidget(self.ui)
