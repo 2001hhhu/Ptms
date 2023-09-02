@@ -1,5 +1,6 @@
 import psutil
 import time
+import socket
 
 
 class Network:
@@ -39,5 +40,13 @@ class Network:
 
 
     def getdata(self):
-        str = "HuHuihao"
-        return str
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        data = {
+            'hostname':hostname,
+            'ip':ip
+        }
+        return data
+
+if __name__ == '__main__':
+    net = Network()
