@@ -1,3 +1,5 @@
+from this import s
+
 import psutil
 import time
 import socket
@@ -8,23 +10,9 @@ class Network:
     # bytes sent_1,sent_2,recv_1,recv_2,sent_rate,recv_rate;
 
     def __init__(self):
-        self.sent_1 = psutil.net_io_counters(pernic=True)['WLAN'].bytes_sent
-        self.recv_1 = psutil.net_io_counters(pernic=True)['WLAN'].bytes_recv
+        self.a = 1
 
-        time.sleep(1)
 
-        self.sent_2 = psutil.net_io_counters(pernic=True)['WLAN'].bytes_sent
-        self.recv_2 = psutil.net_io_counters(pernic=True)['WLAN'].bytes_recv
-
-        self.sent_rate = self.sent_2 - self.sent_1
-        self.recv_rate = self.recv_2 - self.recv_1
-
-        self.cpu_amount = psutil.cpu_count()
-        self.cpu_percent = psutil.cpu_percent()
-
-    def show(self):
-        print(f"CPU的个数为{self.cpu_amount}")
-        print(f"CPU的使用率为{self.cpu_percent}")
 
 
     def bytes2human(self, n):
@@ -47,6 +35,29 @@ class Network:
             'ip':ip
         }
         return data
+
+    def getmemory(self):
+        mem = psutil.virtual_memory()
+        zj = float(mem.total)/1024/1024/1024
+        ysy = float(mem.used)/1024/1024/1024
+        kx = float(mem.free)/1024/1024/1024
+        return zj,ysy,kx
+
+    def getcpu(self):
+        cpu = (str(psutil.cpu_percent(1))) + '%'
+        return cpu
+
+    def getnet(self):
+        sent_1 = psutil.net_io_counters(pernic=True)['WLAN'].bytes_sent
+        recv_1 = psutil.net_io_counters(pernic=True)['WLAN'].bytes_recv
+        time.sleep(1)
+        sent_2 = psutil.net_io_counters(pernic=True)['WLAN'].bytes_sent
+        recv_2 = psutil.net_io_counters(pernic=True)['WLAN'].bytes_recv
+        sent_rate = (sent_2 - sent_1)/1024
+        recv_rate = (recv_2 - recv_1)/1024
+        return sent_rate,recv_rate
+
+
 
 if __name__ == '__main__':
     net = Network()

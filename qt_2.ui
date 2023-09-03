@@ -13,115 +13,78 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="button3">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>400</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PushButton</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="button4">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>400</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PushButton</string>
-   </property>
-  </widget>
-  <widget class="QSplitter" name="splitter_2">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>220</y>
-     <width>521</width>
-     <height>161</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
-   <widget class="QLabel" name="label_2">
-    <property name="text">
-     <string>流量图</string>
-    </property>
-   </widget>
-   <widget class="MplWidget2" name="asss" native="true"/>
-  </widget>
-  <widget class="QPushButton" name="button1">
-   <property name="geometry">
-    <rect>
-     <x>61</x>
-     <y>401</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>图像展示</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="button2">
-   <property name="geometry">
-    <rect>
-     <x>142</x>
-     <y>401</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>系统显示</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>520</width>
-     <height>206</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QSplitter" name="splitter">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>主机信息</string>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
        </property>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>主机信息</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser"/>
       </widget>
-      <widget class="QTextBrowser" name="textBrowser"/>
-     </widget>
-    </item>
-    <item>
-     <widget class="QSplitter" name="splitter_3">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>端口流量</string>
+     </item>
+     <item>
+      <widget class="QSplitter" name="splitter_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
        </property>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>端口流量</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_2"/>
       </widget>
-      <widget class="QTextBrowser" name="textBrowser_2"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>流量图</string>
+      </property>
      </widget>
-    </item>
-   </layout>
-  </widget>
+     <widget class="MplWidget2" name="asss" native="true"/>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter_4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="button1">
+      <property name="text">
+       <string>图像展示</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button2">
+      <property name="text">
+       <string>系统显示</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button3">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button4">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <customwidgets>
   <customwidget>
