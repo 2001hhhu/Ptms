@@ -9,10 +9,11 @@ class Login:
         path = 'login.ui'
         self.ui = QUiLoader().load(path)
         self.ui.button1.clicked.connect(self.checkout)
+        self.ui.lineedit_2.setEchoMode(self.ui.lineedit_2.Password)
 
     def checkout(self):
-        username = self.ui.username.text()
-        password = self.ui.password.text()
+        username = self.ui.lineedit_1.text()
+        password = self.ui.lineedit_2.text()
         print(username)
         print(password)
         if username == "admin" and password == "123456":
