@@ -29,3 +29,6 @@ class Pp:
         while 10:
             time.sleep(5)
         detect()
+
+    def sing(self):
+        print(123)
