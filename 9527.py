@@ -15,9 +15,9 @@ def docount():
     print(count)
     count = 0
 
-
-while True:
-    docount()
+if __name__ == '__main__':
+    while True:
+        docount()
 
 
 
