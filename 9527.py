@@ -21,6 +21,5 @@ while True:
 
 
 
-
 # sniff(filter='port 1630', prn=lambda x:x.summary(), timeout=10)
 # print(pkt.sprintf("%IP.len%"))
