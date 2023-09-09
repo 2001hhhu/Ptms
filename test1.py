@@ -54,6 +54,8 @@ class Stats(QWidget):
         #self.ui.pushButton.clicked.connect(self.update_graph)
         self.ui.button1.clicked.connect(self.update_graph)
         self.ui.btg1.buttonClicked.connect(self.btnGroup1)
+        self.ui.btg2.buttonClicked.connect(self.btnGroup2)
+        self.ui.btg3.buttonClicked.connect(self.btnGroup3)
         self.setTextBrowser_1()
         self.setTextBrowser_2()
 
@@ -116,7 +118,6 @@ class Stats(QWidget):
     def btnGroup1(self):
         itemID = self.ui.btg1.checkedButton()
         itemText = self.ui.btg1.checkedButton().text()
-        print(itemID)
         print(itemText)
         if itemText == "图形概览":
             self.ui.stack_1.setCurrentIndex(3)
@@ -128,6 +129,22 @@ class Stats(QWidget):
             self.ui.stack_1.setCurrentIndex(2)
 
 
+    def btnGroup2(self):
+        itemText = self.ui.btg2.checkedButton().text()
+        print(itemText)
+        if itemText == "全部":
+            self.ui.stack_2.setCurrentIndex(0)
+        elif itemText == "应用程序":
+            self.ui.stack_2.setCurrentIndex(1)
+
+
+    def btnGroup3(self):
+        itemText = self.ui.btg3.checkedButton().text()
+        print(itemText)
+        if itemText == "全部":
+            self.ui.stack_3.setCurrentIndex(0)
+        elif itemText == "未读":
+            self.ui.stack_3.setCurrentIndex(1)
 
 
 
