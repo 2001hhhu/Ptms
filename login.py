@@ -1,7 +1,7 @@
 import psutil
 from PySide2.QtUiTools import QUiLoader
-from PySide2.QtWidgets import QApplication
-from qt_work import Stats
+from PySide2.QtWidgets import QApplication, QLineEdit
+from test1 import Stats
 
 
 class Login:
@@ -15,13 +15,13 @@ class Login:
         self.stats = Stats()
 
     def checkout(self):
-        username = self.ui.lineedit_1.text()
+        username = self.ui.lineedit.text()
         password = self.ui.lineedit_2.text()
         print(username)
         print(password)
         if username == "admin" and password == "123456":
             print("登录成功")
-            self.stats.ui.show()
+            self.stats.show()
             self.ui.close()
         else:
             print("密码错误")

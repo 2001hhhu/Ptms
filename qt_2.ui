@@ -6,24 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>751</width>
-    <height>528</height>
+    <width>841</width>
+    <height>699</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>端口流量监控系统</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
     <widget class="QSplitter" name="splitter_5">
      <property name="styleSheet">
       <string notr="true">QRadioButton{
 	font-family: &quot;Microsoft YaHei&quot;;
-font-size: 14px;
-font-style: italic;
+font-size: 18px;
 font-weight: bold;
 color: rgb(0, 170, 255);
-font: bold italic 18px &quot;Microsoft YaHei&quot;
 }</string>
      </property>
      <property name="orientation">
@@ -51,239 +49,233 @@ font: bold italic 18px &quot;Microsoft YaHei&quot;
      </widget>
     </widget>
    </item>
-   <item>
+   <item row="1" column="0">
     <widget class="QStackedWidget" name="stack_1">
      <property name="currentIndex">
       <number>3</number>
      </property>
      <widget class="QWidget" name="page">
-      <widget class="QSplitter" name="splitter">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>241</width>
-         <height>351</height>
+         <x>10</x>
+         <y>10</y>
+         <width>791</width>
+         <height>621</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>全部</string>
-        </property>
-       </widget>
-       <widget class="QTextBrowser" name="textBrowser"/>
-      </widget>
-      <widget class="QSplitter" name="splitter_3">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>0</y>
-         <width>431</width>
-         <height>351</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>应用程序</string>
-        </property>
-       </widget>
-       <widget class="QTextBrowser" name="textBrowser_2"/>
-      </widget>
-      <widget class="QSplitter" name="splitter_4">
-       <property name="geometry">
-        <rect>
-         <x>160</x>
-         <y>380</y>
-         <width>351</width>
-         <height>24</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <widget class="QPushButton" name="button1">
-        <property name="text">
-         <string>图像展示</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="button2">
-        <property name="text">
-         <string>系统显示</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="button3">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="button4">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true">font: 700 12pt &quot;Microsoft YaHei UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>全部</string>
+           </property>
+          </widget>
+          <widget class="QTextBrowser" name="textBrowser_1">
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;Microsoft YaHei UI&quot;;</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="label_8">
+           <property name="styleSheet">
+            <string notr="true">font: 700 12pt &quot;Microsoft YaHei UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>应用程序</string>
+           </property>
+          </widget>
+          <widget class="QTextBrowser" name="textBrowser_2"/>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
      <widget class="QWidget" name="page_4">
-      <widget class="QSplitter" name="splitter_6">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>70</y>
-         <width>441</width>
-         <height>281</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <widget class="QLabel" name="label_5">
-        <property name="text">
-         <string>                                                   网络设备</string>
-        </property>
-       </widget>
-       <widget class="QTextBrowser" name="textBrowser_3"/>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="page_3">
-      <widget class="QStackedWidget" name="stack_3">
+      <widget class="QSplitter" name="splitter_13">
        <property name="geometry">
         <rect>
          <x>40</x>
-         <y>80</y>
-         <width>661</width>
-         <height>321</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">*{
-	background-color:rgb(255, 253, 228)
-}</string>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <widget class="QWidget" name="page_5">
-        <widget class="QTextBrowser" name="textBrowser_4">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>60</y>
-           <width>661</width>
-           <height>261</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QTextBrowser{
-	background-color:rgb(255, 255, 255)
-}</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="page_6">
-        <widget class="QTextBrowser" name="textBrowser_5">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>60</y>
-           <width>661</width>
-           <height>261</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QTextBrowser{
-	background-color:rgb(255, 255, 255)
-}</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QLCDNumber" name="lcdNumber">
-       <property name="geometry">
-        <rect>
-         <x>350</x>
-         <y>20</y>
-         <width>64</width>
-         <height>23</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QSplitter" name="splitter_7">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>20</y>
-         <width>94</width>
-         <height>20</height>
+         <y>40</y>
+         <width>761</width>
+         <height>571</height>
         </rect>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <widget class="QRadioButton" name="rbtn7">
-        <property name="text">
-         <string>全部</string>
+       <widget class="QSplitter" name="splitter_12">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
         </property>
+        <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">font: 700 12pt &quot;Microsoft YaHei UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>计算机性能</string>
+         </property>
+        </widget>
+        <widget class="QTextBrowser" name="textBrowser_6"/>
        </widget>
-       <widget class="QRadioButton" name="rbtn8">
-        <property name="text">
-         <string>未读</string>
+       <widget class="QSplitter" name="splitter_6">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
         </property>
+        <widget class="QLabel" name="label_5">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 700 12pt &quot;Microsoft YaHei UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>网络设备</string>
+         </property>
+        </widget>
+        <widget class="QTextBrowser" name="textBrowser_3"/>
        </widget>
       </widget>
      </widget>
+     <widget class="QWidget" name="page_3">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QSplitter" name="splitter_7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <widget class="QRadioButton" name="rbtn7">
+            <property name="text">
+             <string>全部</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="rbtn8">
+            <property name="text">
+             <string>未读</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLCDNumber" name="LCD"/>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QStackedWidget" name="stack_3">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color:rgb(255, 253, 228)
+}</string>
+           </property>
+           <property name="currentIndex">
+            <number>1</number>
+           </property>
+           <widget class="QWidget" name="page_5">
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QTextBrowser" name="textBrowser_4">
+               <property name="styleSheet">
+                <string notr="true">QTextBrowser{
+	background-color:rgb(255, 255, 255)
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_6">
+            <widget class="QTextBrowser" name="textBrowser_5">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>60</y>
+               <width>721</width>
+               <height>371</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTextBrowser{
+	background-color:rgb(255, 255, 255)
+}</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="page_2">
-      <widget class="QLabel" name="label_4">
+      <widget class="QSplitter" name="splitter_10">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>20</y>
-         <width>54</width>
-         <height>16</height>
+         <x>10</x>
+         <y>30</y>
+         <width>751</width>
+         <height>31</height>
         </rect>
        </property>
-       <property name="text">
-        <string>日期</string>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-      </widget>
-      <widget class="QRadioButton" name="rbtn5">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>10</y>
-         <width>95</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>全部</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="rbtn6">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>10</y>
-         <width>95</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>应用程序</string>
-       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QRadioButton" name="rbtn5">
+           <property name="text">
+            <string>全部</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="rbtn6">
+           <property name="text">
+            <string>应用程序</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+	font-family: &quot;Microsoft YaHei&quot;;
+	font-size: 16px;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+}
+	</string>
+        </property>
+        <property name="text">
+         <string>日期</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QStackedWidget" name="stack_2">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>50</y>
-         <width>691</width>
-         <height>391</height>
+         <x>10</x>
+         <y>70</y>
+         <width>801</width>
+         <height>541</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -295,49 +287,124 @@ font: bold italic 18px &quot;Microsoft YaHei&quot;
         <number>0</number>
        </property>
        <widget class="QWidget" name="page_7">
-        <widget class="QSplitter" name="splitter_2">
+        <widget class="QPushButton" name="button1">
          <property name="geometry">
           <rect>
-           <x>30</x>
-           <y>40</y>
-           <width>621</width>
-           <height>301</height>
+           <x>360</x>
+           <y>500</y>
+           <width>81</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">*{
-	background-color:white
+          <string notr="true">QPushButton{
+ background-color:rgb(255, 0, 127)
+font: 700 12pt &quot;Microsoft YaHei UI&quot;;
 }</string>
+         </property>
+         <property name="text">
+          <string>图像展示</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_2">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>30</y>
+           <width>721</width>
+           <height>461</height>
+          </rect>
          </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">*{
+	background-color:white
+}</string>
+          </property>
           <property name="text">
            <string>流量图</string>
           </property>
          </widget>
-         <widget class="MplWidget2" name="asss" native="true"/>
+         <widget class="MplWidget2" name="asss" native="true">
+          <property name="styleSheet">
+           <string notr="true">*{
+	background-color:white
+}</string>
+          </property>
+         </widget>
         </widget>
        </widget>
-       <widget class="QWidget" name="page_8"/>
+       <widget class="QWidget" name="page_8">
+        <widget class="QListView" name="listView">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>221</width>
+           <height>451</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+	blackground-color:white;
+	font: 700 12pt &quot;Microsoft JhengHei UI&quot;
+}</string>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_11">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>20</y>
+           <width>471</width>
+           <height>441</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QLabel" name="label_6">
+          <property name="styleSheet">
+           <string notr="true">QLabel#label_6{
+	font: 12pt &quot;Modern No. 20&quot;
+}</string>
+          </property>
+          <property name="text">
+           <string>流量图</string>
+          </property>
+         </widget>
+         <widget class="MplWidget3" name="widget" native="true">
+          <property name="styleSheet">
+           <string notr="true">*{
+ background-color:white
+}</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
       </widget>
      </widget>
     </widget>
    </item>
   </layout>
-  <zorder>stack_1</zorder>
-  <zorder>splitter_4</zorder>
-  <zorder>rbtn1</zorder>
-  <zorder>rbtn2</zorder>
-  <zorder>rbtn3</zorder>
-  <zorder>rbtn4</zorder>
  </widget>
  <customwidgets>
   <customwidget>
    <class>MplWidget2</class>
    <extends>QWidget</extends>
-   <header>mplwidget2.h</header>
+   <header location="global">mplwidget2.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MplWidget3</class>
+   <extends>QWidget</extends>
+   <header location="global">mplwidget3.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
