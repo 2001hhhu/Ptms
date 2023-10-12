@@ -29,7 +29,7 @@ def get_process_name():
         if len(item) == 5 and item[4] != "0":
             process_name = rows[i + 1][0].replace("[", "")
             process_name = process_name.replace("]", "")
-            inf[int(item[1].split(":")[1])] = process_name
+            inf[int(item[1].split(":")[-1])] = process_name
 
 
     # process_name_to_port = {}

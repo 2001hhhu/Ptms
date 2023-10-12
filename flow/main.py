@@ -9,7 +9,7 @@ from matplotlib import pyplot as plt
 from matplotlib.backends.backend_qt5agg import (
     FigureCanvasQTAgg as FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
 from network_state import Network
-from flow.port import *
+from port import *
 
 
 process_name_flow = defaultdict(
@@ -141,6 +141,7 @@ class Stats(QWidget):
         self.t_now_2 = 0.0
         self.t_2 = [0.0]
         self.st = ""
+        self._list_2 = ["未读信息："]
         self.visual_data = FigureCanvasDemo2(width=self.ui.graphicsView.width() / 101,
                                              height=self.ui.graphicsView.height() / 101)
 
@@ -238,13 +239,23 @@ class Stats(QWidget):
         self.ui.textBrowser_3.append(strs[3])
         self.ui.textBrowser_3.append(strs[4])
 
-    def setTextBrowser_5(self):
-        self.ui.textBrowser_5.setPlainText("未读信息：")
+
+    def setTextBrowser_4(self,item):
+        _str = self._list_2.remove(self._list_2[item.row()])
+        # self.ui.textBrowser_4.setPlainText(" ")
+        self.ui.textBrowser_4.append(_str)
+
+    def setlistView_2(self):
         for key, values in process_name_flow.items():
             str_1 = self.hum_convert(values['all'])
-            ch = f"{str_1[-2]}{str_1[-1]}"
-            if ch == "GB":
-                self.ui.textBrowser_5.append(f"应用{key}已用{str_1}流量")
+            ch = str_1[-1]
+            if ch == 'B':
+                self._list_2.append(f"应用{key}已用{str_1}流量")
+                print(self._list_2)
+        model = QStringListModel()
+        model.setStringList(self._list)
+        self.ui.listView_2.setModel(model)
+        self.ui.listView_2.clicked.connect(self.setTextBrowser_4)
 
     def setTextBrowser_6(self):
         net = Network()
@@ -261,7 +272,7 @@ class Stats(QWidget):
     def btnGroup1(self):
         itemID = self.ui.btg1.checkedButton()
         itemText = self.ui.btg1.checkedButton().text()
-        print(itemText)
+        # print(itemText)
         if itemText == "图形概览":
             self.ui.stack_1.setCurrentIndex(3)
         elif itemText == "网络流量":
@@ -291,7 +302,7 @@ class Stats(QWidget):
 
     def btnGroup2(self):
         itemText = self.ui.btg2.checkedButton().text()
-        print(itemText)
+        # print(itemText)
         if itemText == "全部":
             self.ui.stack_2.setCurrentIndex(0)
         elif itemText == "应用程序":
@@ -304,12 +315,12 @@ class Stats(QWidget):
 
     def btnGroup3(self):
         itemText = self.ui.btg3.checkedButton().text()
-        print(itemText)
+        # print(itemText)
         if itemText == "全部":
             self.ui.stack_3.setCurrentIndex(0)
         elif itemText == "未读":
             self.ui.stack_3.setCurrentIndex(1)
-            self.setTextBrowser_5()
+            self.setlistView_2()
 
     def showList(self):
         # 进程列表的获取与事件
@@ -385,5 +396,6 @@ if __name__ == '__main__':
         t.start()
     app = QApplication([])
     window = Stats()
+    window.resize(1100,700)
     window.show()
     app.exec()
